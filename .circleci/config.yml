@@ -14,7 +14,6 @@ jobs:
       - checkout
       - node/install-packages:
           pkg-manager: yarn
-          check-cache: detect
       - run:
           name: Lint
           command: npm run lint
