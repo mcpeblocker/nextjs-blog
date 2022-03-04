@@ -1,0 +1,8 @@
+services:
+  blog:
+    build:
+      context: .
+    image: blog.mcpeblocker.uz
+    container_name: "blog.mcpeblocker.uz"
+    ports:
+      - "4444:4444"
