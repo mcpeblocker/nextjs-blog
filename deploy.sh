@@ -1,5 +1,3 @@
 #!/bin/bash
 
-echo "test deploy"
-
-ls
+docker-compose up -d --no-deps --build blog
