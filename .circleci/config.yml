@@ -14,15 +14,16 @@ jobs:
       - checkout
       - node/install:
           install-yarn: true
+          install-npm: false
           node-version: v16.14.0
       - node/install-packages:
           pkg-manager: yarn
       - run:
           name: Lint
-          command: npm run lint
+          command: yarn lint
       - run:
           name: Build
-          command: npm run build
+          command: yarn build
       - add_ssh_keys
       - run: ssh-keyscan mcpeblocker.uz >> ~/.ssh/known_hosts
       - run: ssh -v root@mcpeblocker.uz "./Projects/blog.mcpeblocker.uz/deploy.sh"
