@@ -17,6 +17,6 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
-          script: cd ~/Projects/blog.mcpeblocker.uz && git pull && ./deploy.sh
+          script: cd ~/Projects/blog.mcpeblocker.uz && (git stash && git pull) && ./deploy.sh
         
 
