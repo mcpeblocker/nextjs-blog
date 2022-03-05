@@ -1,14 +1,39 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Blog</title>
-        <meta name="description" content="Blog | mcpeblocker.uz" />
+        <title>Personal Blog</title>
+        <meta name="title" content="Personal Blog" />
+        <meta
+          name="description"
+          content="A weblog by Alisher Ortiqov, a backend developer living in Uzbekistan, about the latest technologies & news."
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://blog.mcpeblocker.uz/" />
+        <meta property="og:title" content="Personal Blog" />
+        <meta
+          property="og:description"
+          content="A weblog by Alisher Ortiqov, a backend developer living in Uzbekistan, about the latest technologies & news."
+        />
+        <meta property="og:image" content="https://blog.mcpeblocker.uz/social-preview.jpg" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://blog.mcpeblocker.uz/" />
+        <meta property="twitter:title" content="Personal Blog" />
+        <meta
+          property="twitter:description"
+          content="A weblog by Alisher Ortiqov, a backend developer living in Uzbekistan, about the latest technologies & news."
+        />
+        <meta property="twitter:image" content="https://blog.mcpeblocker.uz/social-preview.jpg" />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -18,7 +43,7 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
@@ -59,14 +84,14 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
