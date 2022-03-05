@@ -7,8 +7,8 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Personal Blog</title>
-        <meta name="title" content="Personal Blog" />
+        <title>Alisher Ortiqov - Personal Dev Blog</title>
+        <meta name="title" content="Alisher Ortiqov - Personal Dev Blog" />
         <meta
           name="description"
           content="A weblog by Alisher Ortiqov, a backend developer living in Uzbekistan, about the latest technologies & news."
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://blog.mcpeblocker.uz/" />
-        <meta property="og:title" content="Personal Blog" />
+        <meta property="og:title" content="Alisher Ortiqov - Personal Dev Blog" />
         <meta
           property="og:description"
           content="A weblog by Alisher Ortiqov, a backend developer living in Uzbekistan, about the latest technologies & news."
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://blog.mcpeblocker.uz/" />
-        <meta property="twitter:title" content="Personal Blog" />
+        <meta property="twitter:title" content="Alisher Ortiqov - Personal Dev Blog" />
         <meta
           property="twitter:description"
           content="A weblog by Alisher Ortiqov, a backend developer living in Uzbekistan, about the latest technologies & news."
