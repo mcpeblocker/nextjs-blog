@@ -19,10 +19,10 @@ jobs:
           KEY: ${{ secrets.SSHKEY }}
           script: cd ~/Projects/blog.mcpeblocker.uz && (git stash && git pull) && (chmod +x deploy.sh && ./deploy.sh)
 
-      - name: Notify on telegram
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
+      # - name: Notify on telegram
+      #   uses: appleboy/telegram-action@master
+      #   with:
+      #     to: ${{ secrets.TELEGRAM_TO }}
+      #     token: ${{ secrets.TELEGRAM_TOKEN }}
         
 
