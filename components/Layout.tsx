@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Footer from "./common/Footer";
 import Navbar from "./common/Navbar";
 import SEO from './common/SEO';
 import { ISEO } from "./common/seo.interface";
@@ -13,6 +14,7 @@ const Layout: FC<Props> = ({ children, seo }) => {
         <SEO {...seo }/>
         <Navbar />
         {children}
+        <Footer />
     </div>
   );
 };
