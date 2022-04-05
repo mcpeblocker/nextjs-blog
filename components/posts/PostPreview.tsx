@@ -2,16 +2,12 @@ import Image from "next/image";
 import { FC } from "react";
 import Link from "next/link";
 import Posts from "../../pages/posts";
+import Post from "../../interfaces/post";
+import dayjs from "dayjs";
 
 interface Props {
   type?: "horizontal" | "normal" | "cover";
-  post: {
-    title: string;
-    description?: string;
-    date: string;
-    image: string;
-    slug: string;
-  };
+  post: Post
 }
 
 const PostPreview: FC<Props> = ({ type = "normal", post }) => {
@@ -58,6 +54,7 @@ const PostPreview: FC<Props> = ({ type = "normal", post }) => {
 };
 
 const Card: FC<Props> = ({ post }) => {
+  let date = dayjs(post.date).format("DD-MM-YYYY");
   return (
     <div className="card-body p-4 d-flex flex-column justify-content-between">
       <h5 className="card-title">{post.title}</h5>
@@ -67,7 +64,7 @@ const Card: FC<Props> = ({ post }) => {
       </p>
       <div className="d-flex justify-content-between align-items-center align-middle">
         <p className="card-text my-auto">
-          <small className="text-muted">{post.date}</small>
+          <small className="text-muted">{date}</small>
         </p>
         <Link href={`/posts/${post.slug}`} passHref>
           <a className="text-dark fw-bold text-decoration-none">Read more</a>

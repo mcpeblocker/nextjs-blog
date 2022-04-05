@@ -3,6 +3,7 @@ import PostPreview from "../posts/PostPreview";
 
 let posts = [
   {
+    id: 1,
     title: "How to use Next.js",
     // description: 'Learn that',
     description:
