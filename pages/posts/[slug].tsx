@@ -1,4 +1,4 @@
-import { GetStaticPropsContext } from "next";
+import { GetStaticPaths, GetStaticPropsContext } from "next";
 import { useRouter } from "next/router";
 import { FC } from "react";
 import Layout from "../../components/Layout";
@@ -11,6 +11,13 @@ const Post: FC = () => {
         Post: {slug}
     </Layout>
 }
+
+export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
+    return {
+        paths: [],
+        fallback: 'blocking'
+    }
+} 
 
 export const getStaticProps = async (context: GetStaticPropsContext) => {
     const res = await fetch("http://api.blog.mcpeblocker.uz/posts/" + context.params?.slug);
